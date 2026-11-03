@@ -143,3 +143,24 @@ if __name__ == '__main__':
 
     print("\nСредняя оценка студентов по Python:", get_students_avg_hw([student_1, student_2], 'Python'))
     print("Средняя оценка лекторов по Python:", get_lecturers_avg_lecture([lecturer_1, lecturer_2], 'Python'))
+
+
+
+
+# --- Проверка Задания №2 ---
+print("\n--- Проверка Задания №2 ---")
+lecturer_test = Lecturer('Иван', 'Иванов')
+reviewer_test = Reviewer('Пётр', 'Петров')
+student_test = Student('Алёхина', 'Ольга', 'Ж')
+
+student_test.courses_in_progress += ['Python', 'Java']
+lecturer_test.courses_attached += ['Python', 'C++']
+reviewer_test.courses_attached += ['Python', 'C++']
+
+print(student_test.rate_lecture(lecturer_test, 'Python', 7))   # Ожидается None
+print(student_test.rate_lecture(lecturer_test, 'Java', 8))     # Ожидается Ошибка
+print(student_test.rate_lecture(lecturer_test, 'С++', 8))      # Ожидается Ошибка
+print(student_test.rate_lecture(reviewer_test, 'Python', 6))   # Ожидается Ошибка
+
+print(lecturer_test.grades)  # Ожидается {'Python': [7]}
+print("--- Конец проверки ---")

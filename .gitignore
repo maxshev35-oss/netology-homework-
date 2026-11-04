@@ -1,0 +1,6 @@
+.idea/
+.gigaide/
+.venv/
+__pycache__/
+*.pyc
+token.txt

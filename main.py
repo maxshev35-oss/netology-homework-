@@ -115,3 +115,4 @@ if __name__ == '__main__':
                 print(f"Не удалось получить информацию: {info_response.status_code}")
         except Exception as e:
             print(f"Ошибка при получении размера: {e}")
+            

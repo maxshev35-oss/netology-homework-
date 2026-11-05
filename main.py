@@ -5,7 +5,7 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-TOKEN = 'y0__wgBELzBv5wFGNuWAyCoy-HSGTCg8IatCK5mrWdvMRrChI7BBPoOsptk9JFB'
+TOKEN = input("Введите ваш токен Яндекс.Диска: ").strip()
 FOLDER_NAME = 'aiepyapi-162'
 
 
